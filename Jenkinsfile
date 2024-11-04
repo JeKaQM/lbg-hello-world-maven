@@ -1,17 +1,17 @@
 pipeline{
     agent any
-    
+
     tools{
         maven "M3"
     }
-    
+
     stages{
         stage('Checkout'){
             steps{
                 git branch: 'main', url: 'https://github.com/JeKaQM/lbg-hello-world-maven.git'
             }
         }
-        
+
 
         stage('Compile'){
             steps{
